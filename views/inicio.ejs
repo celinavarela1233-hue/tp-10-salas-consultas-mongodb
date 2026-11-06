@@ -1,0 +1,17 @@
+<h1><%= titulo %></h1>
+
+<% if (locals.seccion) { %>
+    <p><strong>Sección:</strong> <%= seccion %></p>
+<% } %>
+
+<section class="bienvenida">
+    <p>
+        A través de esta plataforma podés consultar las salas disponibles y solicitar un turno.
+    </p>
+
+    <div class="acciones" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <a class="boton" href="/reservas">Ver listado de reservas</a>
+        <a class="boton" href="/reservas/nueva">Reservar una sala</a>
+        <a class="boton" href="/estado">Ver estado del servicio</a>
+    </div>
+</section>

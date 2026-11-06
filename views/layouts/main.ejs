@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= titulo %> | Sistema de Reservas</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="/" class="marca">
+      <strong>Reserva de Salas</strong>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/reservas">Reservas</a>
+      <a href="/reservas/nueva" class="boton">Nueva Reserva</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <%- body %>
+  </main>
+
+  <footer class="pie">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+      <p>&copy; 2026 Sistema de Gestión de Salas</p>
+      <% if (locals.solicitudId) { %>
+        <span class="etiqueta" style="margin-bottom: 0;">ID Solicitud: <%= solicitudId %></span>
+      <% } %>
+    </div>
+  </footer>
+
+</body>
+</html>

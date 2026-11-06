@@ -1,0 +1,41 @@
+<h1>Reservas registradas</h1>
+
+<a class="boton" href="/reservas/nueva">
+    Nueva reserva
+</a>
+
+<% if (!locals.reservas || reservas.length === 0) { %>
+
+    <p>No hay reservas registradas en este momento.</p>
+
+<% } else { %>
+
+    <section class="grilla">
+
+        <% reservas.forEach(reserva => { %>
+
+            <article class="tarjeta">
+
+                <h2><%= reserva.estudiante %></h2>
+
+                <p><strong>Email:</strong> <%= reserva.email %></p>
+
+                <p><strong>Sala:</strong> <%= reserva.sala %></p>
+
+                <p><strong>Fecha:</strong> <%= reserva.fecha %></p>
+
+                <p><strong>Turno:</strong> <%= reserva.turno %></p>
+
+                <p><strong>Personas:</strong> <%= reserva.personas %></p>
+
+                <a href="/reservas/<%= reserva.id %>">
+                    Ver detalle
+                </a>
+
+            </article>
+
+        <% }) %>
+
+    </section>
+
+<% } %>

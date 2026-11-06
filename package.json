@@ -1,0 +1,28 @@
+{
+  "name": "tp-10-salas-consultas-mongodb",
+  "version": "1.0.0",
+  "description": "tp-10-salas-consultas-mongodb",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "format": "prettier --write src scripts",
+    "format:check": "prettier --check src scripts",
+    "lint": "eslint src scripts",
+    "check": "npm run format:check && npm run lint"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^8.8.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3"
+  }
+}

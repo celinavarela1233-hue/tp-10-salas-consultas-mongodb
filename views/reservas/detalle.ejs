@@ -1,0 +1,25 @@
+<h1>Detalle de la Reserva #<%= reserva.id %></h1>
+
+<% if (locals.seccion) { %>
+    <p><strong>Sección:</strong> <%= seccion %></p>
+<% } %>
+
+<article class="detalle">
+
+    <h2><%= reserva.estudiante %></h2>
+
+    <p><strong>Correo electrónico:</strong> <%= reserva.email %></p>
+
+    <p><strong>Sala reservada:</strong> <%= reserva.sala %></p>
+
+    <p><strong>Fecha:</strong> <%= reserva.fecha %></p>
+
+    <p><strong>Turno:</strong> <%= reserva.turno %></p>
+
+    <p><strong>Cantidad de personas:</strong> <%= reserva.personas %></p>
+
+</article>
+
+<div class="acciones" style="margin-top: 1.5rem;">
+    <a class="boton" href="/reservas">Volver al listado</a>
+</div>
